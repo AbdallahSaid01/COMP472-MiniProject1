@@ -42,7 +42,7 @@ print("For predicting sentiments : \n")
 print(classification_report(y2_test, y2_pred))
 print("The Confusion Matrix of Decision Tree(Sentiments): \n", confusion_matrix(y2_test, y2_pred))
 
-pd={"criterion":["entropy"], "max_depth": [2,11],"min_samples_split": [12,40,6]}
+pd={"criterion":["gini"], "max_depth": [10,60,40,150],"min_samples_split": [100,40,200]}
 grida=GridSearchCV(estimator=classifier1,param_grid=pd,n_jobs=-1,error_score='raise')
 grida.fit(x1_train, y1_train)
 y1_pred = grida.predict(x1_test)
