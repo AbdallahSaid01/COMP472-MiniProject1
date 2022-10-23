@@ -47,6 +47,8 @@ print("Calculating hit and miss rates")
 hitRate = (totalWordsFound/(totalWordsFound+totalWordsNotFound))*100
 missRate = (totalWordsNotFound/(totalWordsFound+totalWordsNotFound))*100
 
+print('hitrate = ', hitRate)
+
 x1_train, x1_test, y1_train, y1_test = train_test_split(sentenceEmbed, y1, train_size=0.8, test_size=0.2)
 x2_train, x2_test, y2_train, y2_test = train_test_split(sentenceEmbed, y2, train_size=0.8, test_size=0.2)
 
